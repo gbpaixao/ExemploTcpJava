@@ -20,6 +20,15 @@ public class TCPClient{
             System.out.print("[ Enviando mensagem    ..............................  ");
             os.write(buf);
             System.out.println("[OK] ]");
+            
+            // Recebendo mensagem de sucesso do servidor
+            byte[] buf_success = new byte[20]; // buffer de recepção
+            is.read(buf_success); // bloqueante
+            String msg_success = new String(buf_success);
+            
+            System.out.println("  Status do recebimento: " + msg_success);
+            
+            
         }catch(Exception e){System.out.println(e);}    
         System.out.println("[ FIM ]");
     }
