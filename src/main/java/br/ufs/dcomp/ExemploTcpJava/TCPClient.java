@@ -26,7 +26,7 @@ public class TCPClient{
             is.read(buf_success); // bloqueante
             String msg_success = new String(buf_success);
             
-            System.out.println("  Status do recebimento: " + msg_success);
+            System.out.println("Status do recebimento: " + msg_success);
             
             
         }catch(Exception e){System.out.println(e);}    
